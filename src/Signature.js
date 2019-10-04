@@ -11,9 +11,6 @@ module.exports = {
     {
         if(privKey == null)
         {
-            pubKey = nacl.randombytes_buf(nacl.crypto_sign_PUBLICKEYBYTES);
-            privKey = nacl.randombytes_buf(nacl.crypto_sign_SECRETKEYBYTES);
-
             var obj = nacl.crypto_sign_keypair();
             pubKey = obj.publicKey;
             privKey = obj.privateKey;
